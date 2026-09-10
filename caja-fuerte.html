@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caja fuerte</title>
+  <style>
+    html,
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      display: block;
+      width: min(180px, 42vw);
+      height: auto;
+      animation: fall 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      transform: translateY(-120vh) rotate(-8deg);
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(0) rotate(0deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="assets/caja-fuerte.gif" alt="">
+</body>
+</html>
