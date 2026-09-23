@@ -12,60 +12,44 @@
       <a class="logo" href="index.html">PORTAFOLIO</a>
       <ul>
         <li><a href="index.html">Inicio</a></li>
+        <li><a href="trabajos.html" aria-current="page">Proyectos</a></li>
         <li><a href="index.html#about">Sobre mí</a></li>
-        <li><a href="index.html#contact">Contacto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="works-page">
-    <section class="works-hero">
+    <section class="works-hero" aria-labelledby="works-page-title">
       <div class="top-back-wrap top-back-wrap-hero">
         <a class="back-button" href="index.html" aria-label="Volver a la página principal">←</a>
       </div>
-      <h1>Trabajos</h1>
+      <h1 id="works-page-title">Trabajos</h1>
       <p>Explora una selección de proyectos organizados por tipo de trabajo, desde identidad visual hasta experiencias digitales y piezas experimentales.</p>
     </section>
 
-    <section class="category-grid" aria-label="Categorías de trabajos">
-      <a class="category-card" href="#proyectos-estudiantiles">Proyectos estudiantiles</a>
-      <a class="category-card" href="#sobre-mi">Más sobre mí</a>
-    </section>
-
-    <section class="works-sections">
-      <section class="works-section" id="proyectos-estudiantiles">
-        <h2>Proyectos estudiantiles</h2>
+    <section class="works-sections" aria-label="Contenido de trabajos">
+      <section class="works-section" id="proyectos-estudiantiles" aria-labelledby="latest-projects-title">
+        <h2 id="latest-projects-title">Últimos proyectos</h2>
+        <h3 id="student-projects-title">Proyectos</h3>
         <div class="mini-grid mini-grid-compact">
-          <a class="mini-card mini-card-link" href="proyectos.html">
+          <a class="mini-card mini-card-link" href="index.html" aria-label="Volver al inicio desde el proyecto estudiantil">
             <span>Proyecto</span>
-            <strong>ICINF</strong>
+            <h3>ICINF</h3>
           </a>
         </div>
       </section>
 
-      <section class="works-section" id="sobre-mi">
-        <h2>Más sobre mí</h2>
-        <div class="mini-grid mini-grid-compact">
-          <a class="mini-card mini-card-link" href="index.html#about">
-            <span>Bio</span>
-            <strong>Perfil</strong>
-          </a>
-          <a class="mini-card mini-card-link" href="index.html#about">
-            <span>Intereses</span>
-            <strong>Acerca de mí</strong>
-          </a>
-        </div>
-      </section>
-
-      <section class="works-section safe-box-section" aria-label="Estado final del portafolio">
+      <section class="works-section safe-box-section" aria-labelledby="safe-box-title">
         <div class="safe-box-wrap">
-          <h2>Caja fuerte</h2>
-          <button class="safe-box" type="button" aria-label="Estado lock" data-clicks="0">
+          <h2 id="safe-box-title">Caja fuerte</h2>
+          <button class="safe-box" type="button" aria-label="Estado: caja fuerte bloqueada" data-clicks="0">
             <span>Estado</span>
             <strong>LOCK</strong>
           </button>
         </div>
       </section>
+
     </section>
   </main>
 

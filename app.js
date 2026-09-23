@@ -8,6 +8,7 @@ if (safeBox) {
 
   safeBox.addEventListener("click", () => {
     if (safeBox.classList.contains("is-unlocked")) {
+      window.location.href = "caja-fuerte.html";
       return;
     }
 
@@ -18,8 +19,6 @@ if (safeBox) {
       safeBox.classList.add("is-unlocked");
       safeBox.setAttribute("aria-label", "Caja fuerte desbloqueada");
       safeBox.querySelector("strong").textContent = "OPEN";
-      safeBox.disabled = true;
-      window.location.href = "caja-fuerte.html";
       return;
     }
 

@@ -11,38 +11,42 @@
     <nav aria-label="Navegación principal">
       <a class="logo" href="index.html">PORTAFOLIO</a>
       <ul>
-        <li><a href="trabajos.html">Trabajos</a></li>
+        <li><a href="trabajos.html" aria-current="page">Proyectos</a></li>
         <li><a href="index.html#about">Sobre mí</a></li>
-        <li><a href="index.html#contact">Contacto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="works-page">
-    <section class="works-hero">
+    <section class="works-hero" aria-labelledby="projects-page-title">
       <div class="top-back-wrap top-back-wrap-hero">
         <a class="back-button" href="trabajos.html" aria-label="Volver a Trabajos">←</a>
       </div>
-      <h1>Proyectos</h1>
+      <h1 id="projects-page-title">Proyectos</h1>
       <p>Una selección de trabajos y desarrollos vinculados a Ingeniería Civil Informática.</p>
     </section>
 
     <section class="project-gallery" aria-label="Galería de proyectos de ingeniería civil informática">
-      <article class="gallery-card">
+      <article class="gallery-card" aria-labelledby="project-1-title">
         <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80" alt="Proyecto de programación">
-        <h2>Proyecto 1</h2>
+        <h2 id="project-1-title">Proyecto 1</h2>
       </article>
-      <article class="gallery-card">
+      <article class="gallery-card" aria-labelledby="project-2-title">
         <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80" alt="Proyecto de desarrollo web">
-        <h2>Proyecto 2</h2>
+        <h2 id="project-2-title">Proyecto 2</h2>
       </article>
-      <article class="gallery-card">
+      <article class="gallery-card" aria-labelledby="project-3-title">
         <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=1200&q=80" alt="Proyecto de análisis de datos">
-        <h2>Proyecto 3</h2>
+        <h2 id="project-3-title">Proyecto 3</h2>
       </article>
-      <article class="gallery-card">
+      <article class="gallery-card" aria-labelledby="project-4-title">
         <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80" alt="Proyecto de software">
-        <h2>Proyecto 4</h2>
+        <h2 id="project-4-title">Proyecto 4</h2>
+      </article>
+      <article class="gallery-card" aria-labelledby="student-project-title">
+        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80" alt="Proyecto estudiantil de ingeniería informática">
+        <h2 id="student-project-title">Proyecto estudiantil</h2>
       </article>
     </section>
   </main>
