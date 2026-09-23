@@ -70,12 +70,8 @@
     /* ---------- HERO ---------- */
 
     .hero {
-      height: 100vh;
-      padding: 140px 40px 40px;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      min-height: 100vh;
+      padding: 140px 40px 100px;
     }
 
     .hero-top {
@@ -102,9 +98,10 @@
     .hero-brand {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
-      text-align: center;
+      text-align: left;
+      margin-bottom: 72px;
     }
 
     .hero-slogan {
@@ -135,6 +132,63 @@
       justify-content: space-between;
       align-items: flex-start;
       gap: 48px;
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 680px);
+      align-items: start;
+      gap: 48px;
+    }
+
+    .hero-main-column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 48px;
+      max-width: 680px;
+    }
+
+    .hero-profile-section,
+    .hero-copy-section {
+      width: 100%;
+    }
+
+    .hero-copy-section h2,
+    .icinf-gallery h2 {
+      margin: 0 0 16px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .icinf-gallery {
+      width: 100%;
+      max-width: 520px;
+    }
+
+    .icinf-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .icinf-gallery figure {
+      margin: 0;
+      overflow: hidden;
+      background: #d9d5ce;
+    }
+
+    .icinf-gallery img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .icinf-gallery figure:hover img {
+      transform: scale(1.04);
     }
 
     .hero-intro-block {
@@ -358,8 +412,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: fit-content;
-      min-width: min(420px, calc(100% - 40px));
+      width: min(560px, calc(100% - 40px));
+      min-width: 0;
       min-height: 190px;
       margin: 0 auto 120px;
       padding: 34px 60px;
@@ -874,7 +928,24 @@
       }
 
       .hero {
-        padding: 120px 20px 30px;
+        padding: 120px 20px 80px;
+      }
+
+      .hero-brand {
+        margin-bottom: 52px;
+      }
+
+      .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 56px;
+      }
+
+      .hero-main-column {
+        gap: 36px;
+      }
+
+      .icinf-gallery {
+        max-width: 100%;
       }
 
       .hero-title {
