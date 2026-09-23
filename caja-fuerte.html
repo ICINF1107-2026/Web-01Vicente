@@ -19,12 +19,31 @@
       align-items: center;
     }
 
-    img {
+    .safe-box {
+      border: 0;
+      background: transparent;
+      padding: 0;
+      cursor: default;
+    }
+
+    .safe-box img {
       display: block;
       width: min(180px, 42vw);
       height: auto;
       animation: fall 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
       transform: translateY(-120vh) rotate(-8deg);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
 
     @keyframes fall {
@@ -35,6 +54,14 @@
   </style>
 </head>
 <body>
-  <img src="assets/caja-fuerte.gif" alt="">
+  <button
+    class="safe-box"
+    type="button"
+    aria-label="Estado: caja fuerte bloqueada"
+    aria-live="polite"
+  >
+    <span class="sr-only">Caja fuerte en estado bloqueado</span>
+    <img src="assets/caja-fuerte.gif" alt="Caja fuerte bloqueada">
+  </button>
 </body>
 </html>
