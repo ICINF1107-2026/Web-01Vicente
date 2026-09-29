@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="CSS/style.css">
   <title>Portafolio - Vicente Palacio</title>
 </head>
 <body>
@@ -11,29 +11,31 @@
     <nav aria-label="Navegación principal">
       <a class="logo" href="#top">PORTAFOLIO</a>
       <ul>
-        <li><a href="#home-projects-title">Proyectos</a></li>
-        <li><a href="#contact">Contacto</a></li>
+        <li><a class="nav-link active" href="#home">Inicio</a></li>
+        <li><a class="nav-link" href="#about">Sobre mí</a></li>
+        <li><a class="nav-link" href="#projects">Proyectos</a></li>
+        <li><a class="nav-link" href="#contact">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <header class="hero-top">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <header class="hero-top" aria-label="Información del portafolio">
         <span>Portafolio 2026</span>
         <span>Diseño / Desarrollo</span>
       </header>
 
-      <div class="hero-brand">
+      <header class="hero-brand" aria-label="Identidad del portafolio">
         <h1 id="hero-title" class="hero-title reveal" aria-label="Varchives">
-          <span class="brand-v">V</span>
+          <button class="brand-v" id="brand-v-button" type="button" aria-label="Presiona 10 veces para abrir el GIF">V</button>
           <span class="brand-archives">archives</span>
         </h1>
         <p class="hero-slogan">creando un mayor futuro</p>
-      </div>
+      </header>
 
       <div class="hero-layout">
-        <div class="hero-main-column">
+        <section class="hero-main-column" aria-label="Presentación personal">
           <section class="hero-profile-section" aria-label="Perfil personal">
             <div class="hero-profile">
               <figure class="profile-photo">
@@ -42,53 +44,92 @@
               <div class="profile-copy">
                 <p class="profile-label">Mi nombre</p>
                 <p class="profile-name">Vicente Palacio</p>
+                <p class="profile-status">Estudiante de Bachillerato, Universidad Católica de Temuco</p>
+                <p class="profile-age">19 años</p>
               </div>
             </div>
           </section>
 
-          <section class="hero-copy-section" id="about" aria-labelledby="about-title">
-            <h2 id="about-title">Sobre mí</h2>
-            <p class="hero-description">Soy estudiante de Ingeniería Civil Informática, actualmente en etapa de formación. Me interesa especialmente la programación y la exploración de áreas como robótica, videojuegos y bases de datos. Busco desarrollar soluciones que sean útiles, accesibles y visualmente claras, combinando tecnología y creatividad para facilitar la vida cotidiana y generar un impacto positivo en las personas.</p>
+          <div class="section-divider-small profile-divider" aria-hidden="true"></div>
+
+          <section class="about-experience-layout" aria-label="Perfil y experiencia profesional">
+            <section class="hero-copy-section" id="about" aria-labelledby="about-title">
+              <h2 id="about-title">Sobre mí</h2>
+              <p class="hero-description">Soy estudiante de Ingeniería Civil Informática, actualmente en etapa de formación. Me interesa especialmente la programación y la exploración de áreas como robótica, videojuegos y bases de datos. Busco desarrollar soluciones que sean útiles, accesibles y visualmente claras, combinando tecnología y creatividad para facilitar la vida cotidiana y generar un impacto positivo en las personas.</p>
+            </section>
+
+            <aside class="experience" aria-labelledby="experience-title">
+              <h2 id="experience-title">Experiencia</h2>
+              <ul class="experience-list">
+                <li class="experience-item">
+                  <div class="experience-label"><span>C++</span><span>10%</span></div>
+                  <div class="experience-bar" role="progressbar" aria-label="Experiencia en C++" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"><span style="width: 10%"></span></div>
+                </li>
+                <li class="experience-item">
+                  <div class="experience-label"><span>Programación</span><span>20%</span></div>
+                  <div class="experience-bar" role="progressbar" aria-label="Experiencia en programación" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><span style="width: 20%"></span></div>
+                </li>
+                <li class="experience-item">
+                  <div class="experience-label"><span>JavaScript</span><span>50%</span></div>
+                  <div class="experience-bar" role="progressbar" aria-label="Experiencia en JavaScript" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><span style="width: 50%"></span></div>
+                </li>
+                <li class="experience-item">
+                  <div class="experience-label"><span>ARIA label</span><span>70%</span></div>
+                  <div class="experience-bar" role="progressbar" aria-label="Experiencia en ARIA label" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><span style="width: 70%"></span></div>
+                </li>
+                <li class="experience-item">
+                  <div class="experience-label"><span>Desarrollo Web Accesible</span><span>80%</span></div>
+                  <div class="experience-bar" role="progressbar" aria-label="Experiencia en Desarrollo Web Accesible" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><span style="width: 80%"></span></div>
+                </li>
+                <li class="experience-item">
+                  <div class="experience-label"><span>Modelado de datos</span><span>90%</span></div>
+                  <div class="experience-bar" role="progressbar" aria-label="Experiencia en Modelado de datos" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><span style="width: 90%"></span></div>
+                </li>
+              </ul>
+            </aside>
           </section>
 
-          <section class="hero-copy-section" aria-labelledby="what-i-do-title">
+          <section class="hero-copy-section what-i-do-section" aria-labelledby="what-i-do-title">
             <h2 id="what-i-do-title">Lo que hago</h2>
             <p class="hero-description">Desarrollo experiencias web con HTML y JavaScript, procurando que sean accesibles, útiles y visualmente claras. Me interesa crear soluciones que faciliten la vida cotidiana y comunicar temas de salud de forma cercana.</p>
           </section>
 
-        </div>
-        <section class="home-projects-section" aria-labelledby="home-projects-title">
+        </section>
+        <section class="home-projects-section" id="projects" aria-labelledby="home-projects-title">
+          <div class="section-divider-small project-divider" aria-hidden="true"></div>
           <h2 id="home-projects-title">Proyectos</h2>
-          <div class="home-project-grid">
-            <article class="home-project-card">
+          <div class="home-project-grid" role="list" aria-label="Lista de proyectos destacados">
+            <article class="home-project-card" role="listitem" aria-labelledby="project-1-title">
               <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="">
-              <h3>Proyecto 1</h3>
+              <h3 id="project-1-title">Proyecto 1</h3>
             </article>
-            <article class="home-project-card">
+            <article class="home-project-card" role="listitem" aria-labelledby="project-2-title">
               <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="">
-              <h3>Proyecto 2</h3>
+              <h3 id="project-2-title">Proyecto 2</h3>
             </article>
-            <article class="home-project-card">
+            <article class="home-project-card" role="listitem" aria-labelledby="project-3-title">
               <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=800&q=80" alt="">
-              <h3>Proyecto 3</h3>
+              <h3 id="project-3-title">Proyecto 3</h3>
             </article>
-            <article class="home-project-card">
+            <article class="home-project-card" role="listitem" aria-labelledby="project-4-title">
               <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800&q=80" alt="">
-              <h3>Proyecto 4</h3>
+              <h3 id="project-4-title">Proyecto 4</h3>
             </article>
-            <article class="home-project-card">
+            <article class="home-project-card" role="listitem" aria-labelledby="project-5-title">
               <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="">
-              <h3>Proyecto 5</h3>
+              <h3 id="project-5-title">Proyecto 5</h3>
             </article>
-            <a class="home-project-more" href="#contact">Hablemos de proyectos ↗</a>
+            <a class="home-project-more" href="#contact" role="listitem" aria-label="Ir a la sección de contacto para hablar de proyectos">Hablemos de proyectos ↗</a>
           </div>
         </section>
       </div>
     </section>
 
+    <p class="portfolio-closing">Espero que mi portafolio haya capturado tu atención.<br><br>Recuerda que <strong>la mejor manera de predecir el futuro es creándolo</strong>.<br><br>Y estoy listo para ayudarte a construir el tuyo.</p>
+
     <footer class="contact" id="contact" aria-labelledby="contact-title">
       <h2 id="contact-title">HABLEMOS.</h2>
-      <div class="contact-options">
+      <section class="contact-options" aria-label="Opciones de contacto y currículum">
         <ul class="contact-links" aria-label="Redes y plataformas de contacto">
         <li>
           <a class="contact-link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=Vpalacio2025%40alu.uct.cl&amp;su=Contacto%20desde%20mi%20portafolio" target="_blank" rel="noopener noreferrer" aria-label="Enviar correo con Gmail">
@@ -103,25 +144,25 @@
           <span class="contact-name">Instagram</span>
         </li>
         <li>
-          <span class="contact-link is-disabled" aria-label="GitHub, enlace pendiente" aria-disabled="true" title="GitHub, enlace pendiente">
+          <span class="contact-link is-disabled" role="link" aria-label="GitHub, enlace pendiente" aria-disabled="true" title="GitHub, enlace pendiente">
             <img src="https://cdn.simpleicons.org/github" alt="">
           </span>
           <span class="contact-name">GitHub</span>
         </li>
         <li>
-          <span class="contact-link is-disabled" aria-label="Render, enlace pendiente" aria-disabled="true" title="Render, enlace pendiente">
+          <span class="contact-link is-disabled" role="link" aria-label="Render, enlace pendiente" aria-disabled="true" title="Render, enlace pendiente">
             <img src="https://cdn.simpleicons.org/render" alt="">
           </span>
           <span class="contact-name">Render</span>
         </li>
         <li>
-          <span class="contact-link is-disabled" aria-label="Vercel, enlace pendiente" aria-disabled="true" title="Vercel, enlace pendiente">
+          <span class="contact-link is-disabled" role="link" aria-label="Vercel, enlace pendiente" aria-disabled="true" title="Vercel, enlace pendiente">
             <img src="https://cdn.simpleicons.org/vercel" alt="">
           </span>
           <span class="contact-name">Vercel</span>
         </li>
         <li>
-          <span class="contact-link is-disabled" aria-label="Facebook, enlace pendiente" aria-disabled="true" title="Facebook, enlace pendiente">
+          <span class="contact-link is-disabled" role="link" aria-label="Facebook, enlace pendiente" aria-disabled="true" title="Facebook, enlace pendiente">
             <img src="https://cdn.simpleicons.org/facebook" alt="">
           </span>
           <span class="contact-name">Facebook</span>
@@ -132,13 +173,55 @@
           <span class="cv-paper-mark" aria-hidden="true">CV</span>
           <span class="cv-paper-label">Abrir CV ↗</span>
         </a>
-      </div>
-      <address class="contact-info">
+      </section>
+      <address class="contact-info" aria-label="Información del propietario del portafolio">
         <span>Vicente Palacio</span>
         <span>Programador de Frontend 2026</span>
       </address>
     </footer>
   </main>
+
+  <script>
+    const brandVButton = document.querySelector("#brand-v-button");
+    let brandVClicks = 0;
+
+    brandVButton.addEventListener("click", () => {
+      brandVClicks += 1;
+
+      if (brandVClicks === 10) {
+        window.open("assets/caja-fuerte.gif", "_blank", "noopener,noreferrer");
+        brandVClicks = 0;
+      }
+    });
+
+    const navigationLinks = document.querySelectorAll(".nav-link");
+    const navigationSections = document.querySelectorAll("#home, #about, #projects, #contact");
+
+    const updateActiveNavigation = () => {
+      let activeSection = navigationSections[0];
+      const activationLine = window.innerHeight * 0.45;
+
+      navigationSections.forEach((section) => {
+        if (section.getBoundingClientRect().top <= activationLine) {
+          activeSection = section;
+        }
+      });
+
+      navigationLinks.forEach((link) => {
+        const isActive = link.getAttribute("href") === `#${activeSection.id}`;
+        link.classList.toggle("active", isActive);
+
+        if (isActive) {
+          link.setAttribute("aria-current", "page");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+    };
+
+    updateActiveNavigation();
+    window.addEventListener("scroll", updateActiveNavigation, { passive: true });
+  </script>
 
 </body>
 </html>

@@ -10,8 +10,8 @@
     }
 
     body {
-      background: linear-gradient(180deg, #ffffff 0%, #edf8ff 28%, #bfe0f2 62%, #7ea7c9 100%);
-      color: #111;
+      background: linear-gradient(180deg, #353033 0%, #493238 38%, #671d35 72%, #85223e 100%);
+      color: #fff;
       font-family: Arial, Helvetica, sans-serif;
       overflow-x: hidden;
     }
@@ -65,6 +65,15 @@
       color: inherit;
       text-decoration: none;
       font-size: 14px;
+      transition: transform 0.2s ease, font-size 0.2s ease;
+    }
+
+    nav .nav-link.active {
+      font-size: 16px;
+      font-weight: 700;
+      transform: scale(1.08);
+      text-decoration: underline;
+      text-underline-offset: 6px;
     }
 
     /* ---------- HERO ---------- */
@@ -91,6 +100,8 @@
       display: flex;
       flex-direction: row;
       align-items: baseline;
+      justify-content: center;
+      width: 100%;
       gap: 0.08em;
       flex-wrap: nowrap;
     }
@@ -98,10 +109,11 @@
     .hero-brand {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       justify-content: center;
-      text-align: left;
-      margin-bottom: 72px;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 96px;
     }
 
     .hero-slogan {
@@ -116,6 +128,12 @@
       display: inline-block;
       font-weight: 800;
       font-size: 1em;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      font-family: inherit;
+      cursor: pointer;
     }
 
     .brand-archives {
@@ -136,7 +154,7 @@
 
     .hero-layout {
       display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+      grid-template-columns: 1fr;
       align-items: stretch;
       gap: 48px;
     }
@@ -146,7 +164,42 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 48px;
-      max-width: 680px;
+      max-width: none;
+    }
+
+    .about-experience-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(220px, 0.85fr);
+      align-items: start;
+      gap: 56px;
+      width: 100%;
+      max-width: none;
+    }
+
+    .experience {
+      background: #303034;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 6px;
+      box-shadow: 10px 12px 0 rgba(20, 12, 16, 0.18);
+    }
+
+    .experience {
+      position: relative;
+      align-self: center;
+      justify-self: center;
+      width: min(100%, 340px);
+      padding: 24px;
+      transform: translateY(-18px);
+    }
+
+    .experience::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -29px;
+      width: 1px;
+      background: rgba(255, 255, 255, 0.35);
     }
 
     .hero-profile-section,
@@ -157,13 +210,77 @@
       width: 100%;
     }
 
+    .hero-profile-section {
+      margin-top: 0;
+    }
+
+    .section-divider-small {
+      width: 72px;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    .profile-divider {
+      margin: -8px 0;
+    }
+
+    .project-divider {
+      margin-bottom: 18px;
+    }
+
+    .home-projects-section {
+      padding: 28px;
+      background: linear-gradient(90deg, #4a1427 0%, #111 18%, #111 82%, #4a1427 100%);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 6px;
+      box-shadow: 10px 12px 0 rgba(20, 12, 16, 0.18);
+    }
+
     .hero-copy-section h2,
     .home-projects-section h2,
-    .icinf-gallery h2 {
+    .icinf-gallery h2,
+    .experience h2 {
       margin: 0 0 16px;
       font-size: 14px;
       text-transform: uppercase;
       letter-spacing: 1px;
+    }
+
+    .what-i-do-section .hero-description {
+      max-width: 680px;
+    }
+
+    .experience-list {
+      display: grid;
+      gap: 16px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .experience-item {
+      display: grid;
+      gap: 7px;
+    }
+
+    .experience-label {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .experience-bar {
+      height: 7px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .experience-bar span {
+      display: block;
+      height: 100%;
+      background: #fff;
     }
 
     .icinf-gallery {
@@ -255,6 +372,14 @@
       font-weight: 700;
     }
 
+    .profile-status,
+    .profile-age {
+      max-width: 230px;
+      font-size: 11px;
+      line-height: 1.3;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
     .hero-description {
       max-width: 390px;
       font-size: 18px;
@@ -267,7 +392,8 @@
       grid-template-columns: minmax(0, 1fr);
       grid-template-rows: repeat(6, minmax(88px, 1fr));
       flex: 1;
-      gap: 12px;
+      gap: 0;
+      background: transparent;
     }
 
     .home-project-card {
@@ -276,8 +402,10 @@
       align-items: center;
       min-width: 0;
       overflow: hidden;
-      background: rgba(255, 255, 255, 0.28);
-      border: 1px solid rgba(17, 17, 17, 0.12);
+      background: transparent;
+      border: 0;
+      position: relative;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, z-index 0s;
     }
 
     .home-project-card img {
@@ -293,24 +421,33 @@
       line-height: 1.2;
     }
 
+    .home-project-card:hover {
+      z-index: 2;
+      transform: scale(1.03);
+      box-shadow: 0 10px 24px rgba(20, 12, 16, 0.32);
+    }
+
     .home-project-more {
       display: flex;
       min-height: 88px;
       align-items: center;
       justify-content: center;
       padding: 16px;
-      background: #111;
+      background: rgba(25, 18, 22, 0.72);
       color: #fff;
       text-align: center;
       text-decoration: none;
       font-size: 15px;
       line-height: 1.3;
-      transition: background 0.25s ease, transform 0.25s ease;
+      position: relative;
+      transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
     }
 
     .home-project-more:hover {
-      background: #31566f;
-      transform: translateY(-3px);
+      background: #9b3452;
+      z-index: 2;
+      transform: scale(1.03) translateY(-3px);
+      box-shadow: 0 10px 24px rgba(20, 12, 16, 0.32);
     }
 
     .hero-bottom .more-projects {
@@ -320,6 +457,21 @@
     .scroll {
       font-size: 12px;
       text-transform: uppercase;
+    }
+
+    .portfolio-closing {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 40px 88px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 14px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .portfolio-closing strong {
+      color: #fff;
+      font-weight: 700;
     }
 
     /* ---------- PROJECTS ---------- */
@@ -448,8 +600,8 @@
       display: inline-block;
       margin: 0 40px 80px;
       padding: 20px 28px;
-      border: 1px solid rgba(17, 17, 17, 0.3);
-      color: #111;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: #fff;
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -459,8 +611,8 @@
     }
 
     .more-projects:hover {
-      background: #111;
-      color: #f1f0eb;
+      background: rgba(25, 18, 22, 0.72);
+      color: #fff;
     }
 
     .more-projects-large {
@@ -525,8 +677,8 @@
       align-items: end;
       min-height: 220px;
       padding: 22px;
-      background: #111;
-      color: #f1f0eb;
+      background: rgba(25, 18, 22, 0.72);
+      color: #fff;
       text-decoration: none;
       font-size: clamp(24px, 2vw, 36px);
       line-height: 1;
@@ -576,8 +728,8 @@
       width: 54px;
       height: 54px;
       border-radius: 50%;
-      border: 1px solid rgba(17, 17, 17, 0.4);
-      color: #111;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: #fff;
       text-decoration: none;
       font-size: 22px;
       line-height: 1;
@@ -585,8 +737,8 @@
     }
 
     .back-button:hover {
-      background: #111;
-      color: #f1f0eb;
+      background: rgba(25, 18, 22, 0.72);
+      color: #fff;
       transform: translateY(-2px);
     }
 
@@ -601,14 +753,14 @@
     }
 
     .mini-card {
-      background: #e9e6df;
-      border: 1px solid rgba(17, 17, 17, 0.12);
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       padding: 22px;
       min-height: 180px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      color: #111;
+      color: #fff;
       text-decoration: none;
     }
 
@@ -664,6 +816,8 @@
     .contact {
       padding: 120px 40px 40px;
       min-height: 100svh;
+      background: linear-gradient(180deg, #85223e 0%, #671d35 55%, #4a1427 100%);
+      color: #fff;
 
       display: flex;
       flex-direction: column;
@@ -697,7 +851,7 @@
       padding-top: 0;
       font-style: normal;
       text-align: center;
-      color: #777;
+      color: #fff;
     }
 
     .download-cv {
@@ -714,7 +868,7 @@
       border: 1px solid rgba(17, 17, 17, 0.28);
       background: linear-gradient(135deg, transparent 20px, rgba(17, 17, 17, 0.08) 20px) top right / 40px 40px no-repeat, rgba(255, 255, 255, 0.76);
       box-shadow: 5px 6px 0 rgba(17, 17, 17, 0.12);
-      color: #111;
+      color: #fff;
       text-decoration: none;
       font-size: 12px;
       transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
@@ -757,7 +911,8 @@
 
     .contact-links {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-rows: repeat(3, auto);
       gap: 38px 48px;
       width: 100%;
       max-width: 100%;
@@ -791,7 +946,7 @@
       height: 56px;
       border: 1px solid rgba(17, 17, 17, 0.32);
       border-radius: 50%;
-      color: #111;
+      color: #fff;
       text-decoration: none;
       transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
     }
@@ -831,7 +986,7 @@
     }
 
     .contact a {
-      color: #111;
+      color: #fff;
       text-decoration: none;
     }
 
@@ -869,7 +1024,7 @@
       }
 
       .hero-layout {
-        grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+        grid-template-columns: 1fr;
         gap: 32px;
       }
 
@@ -988,7 +1143,7 @@
 
       .home-project-grid {
         grid-template-columns: minmax(0, 1fr);
-        gap: 10px;
+        gap: 0;
       }
 
       .hero-main-column {
@@ -1002,6 +1157,21 @@
       .hero-title {
         font-size: 22vw;
         letter-spacing: -5px;
+      }
+
+      .about-experience-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .experience {
+        justify-self: stretch;
+        width: 100%;
+        transform: none;
+      }
+
+      .experience::before {
+        display: none;
       }
 
       .hero-bottom {
