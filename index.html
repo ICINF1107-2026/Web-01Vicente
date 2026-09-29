@@ -11,8 +11,8 @@
     <nav aria-label="Navegación principal">
       <a class="logo" href="#top">PORTAFOLIO</a>
       <ul>
-        <li><a href="trabajos.html">Proyectos</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="#home-projects-title">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
       </ul>
     </nav>
   </header>
@@ -55,23 +55,90 @@
             <h2 id="what-i-do-title">Lo que hago</h2>
             <p class="hero-description">Desarrollo experiencias web con HTML y JavaScript, procurando que sean accesibles, útiles y visualmente claras. Me interesa crear soluciones que faciliten la vida cotidiana y comunicar temas de salud de forma cercana.</p>
           </section>
-        </div>
 
+        </div>
+        <section class="home-projects-section" aria-labelledby="home-projects-title">
+          <h2 id="home-projects-title">Proyectos</h2>
+          <div class="home-project-grid">
+            <article class="home-project-card">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="">
+              <h3>Proyecto 1</h3>
+            </article>
+            <article class="home-project-card">
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="">
+              <h3>Proyecto 2</h3>
+            </article>
+            <article class="home-project-card">
+              <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=800&q=80" alt="">
+              <h3>Proyecto 3</h3>
+            </article>
+            <article class="home-project-card">
+              <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800&q=80" alt="">
+              <h3>Proyecto 4</h3>
+            </article>
+            <article class="home-project-card">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="">
+              <h3>Proyecto 5</h3>
+            </article>
+            <a class="home-project-more" href="#contact">Hablemos de proyectos ↗</a>
+          </div>
+        </section>
       </div>
     </section>
 
-    <a class="more-projects more-projects-large" href="trabajos.html">Más proyectos ↗</a>
-
     <footer class="contact" id="contact" aria-labelledby="contact-title">
       <h2 id="contact-title">HABLEMOS.</h2>
-      <a class="download-cv" href="assets/WIN_20260909_16_05_58_Pro.jpg" target="_blank" rel="noopener noreferrer" aria-label="Abrir CV en formato de imagen">Abrir CV ↓</a>
+      <div class="contact-options">
+        <ul class="contact-links" aria-label="Redes y plataformas de contacto">
+        <li>
+          <a class="contact-link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=Vpalacio2025%40alu.uct.cl&amp;su=Contacto%20desde%20mi%20portafolio" target="_blank" rel="noopener noreferrer" aria-label="Enviar correo con Gmail">
+            <img src="https://cdn.simpleicons.org/gmail" alt="">
+          </a>
+          <span class="contact-name">Gmail</span>
+        </li>
+        <li>
+          <a class="contact-link" href="https://www.instagram.com/vxxhen/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Vicente Palacio">
+            <img src="https://cdn.simpleicons.org/instagram" alt="">
+          </a>
+          <span class="contact-name">Instagram</span>
+        </li>
+        <li>
+          <span class="contact-link is-disabled" aria-label="GitHub, enlace pendiente" aria-disabled="true" title="GitHub, enlace pendiente">
+            <img src="https://cdn.simpleicons.org/github" alt="">
+          </span>
+          <span class="contact-name">GitHub</span>
+        </li>
+        <li>
+          <span class="contact-link is-disabled" aria-label="Render, enlace pendiente" aria-disabled="true" title="Render, enlace pendiente">
+            <img src="https://cdn.simpleicons.org/render" alt="">
+          </span>
+          <span class="contact-name">Render</span>
+        </li>
+        <li>
+          <span class="contact-link is-disabled" aria-label="Vercel, enlace pendiente" aria-disabled="true" title="Vercel, enlace pendiente">
+            <img src="https://cdn.simpleicons.org/vercel" alt="">
+          </span>
+          <span class="contact-name">Vercel</span>
+        </li>
+        <li>
+          <span class="contact-link is-disabled" aria-label="Facebook, enlace pendiente" aria-disabled="true" title="Facebook, enlace pendiente">
+            <img src="https://cdn.simpleicons.org/facebook" alt="">
+          </span>
+          <span class="contact-name">Facebook</span>
+        </li>
+        </ul>
+        <hr class="contact-divider" aria-hidden="true">
+        <a class="download-cv" href="assets/cv-en-preparacion.svg" target="_blank" rel="noopener noreferrer" aria-label="Ver aviso de CV en preparación">
+          <span class="cv-paper-mark" aria-hidden="true">CV</span>
+          <span class="cv-paper-label">Abrir CV ↗</span>
+        </a>
+      </div>
       <address class="contact-info">
-        <span>© 2026 Vicente Palacio</span>
-        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=Vpalacio2025%40alu.uct.cl&amp;su=Contacto%20desde%20mi%20portafolio" target="_blank" rel="noopener noreferrer">Vpalacio2025@alu.uct.cl</a>
+        <span>Vicente Palacio</span>
+        <span>Programador de Frontend 2026</span>
       </address>
     </footer>
   </main>
 
-  <script src="app.js"></script>
 </body>
 </html>

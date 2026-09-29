@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" role="img" aria-labelledby="title description">
+  <title id="title">CV en preparación - Vicente Palacio</title>
+  <desc id="description">Aviso indicando que el currículum de Vicente Palacio estará disponible pronto.</desc>
+  <rect width="1200" height="1600" fill="#dceef5"/>
+  <rect x="64" y="64" width="1072" height="1472" rx="12" fill="#fff" stroke="#171717" stroke-width="2"/>
+  <text x="120" y="170" fill="#171717" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">VARCHIVES</text>
+  <text x="1080" y="170" text-anchor="end" fill="#526a76" font-family="Arial, Helvetica, sans-serif" font-size="22">PORTAFOLIO 2026</text>
+  <line x1="120" y1="220" x2="1080" y2="220" stroke="#171717" stroke-width="2"/>
+  <rect x="120" y="320" width="960" height="850" fill="#f3f8fa"/>
+  <text x="600" y="660" text-anchor="middle" fill="#171717" font-family="Georgia, 'Times New Roman', serif" font-size="250" font-style="italic">CV</text>
+  <line x1="400" y1="760" x2="800" y2="760" stroke="#3a7893" stroke-width="8"/>
+  <text x="600" y="900" text-anchor="middle" fill="#171717" font-family="Arial, Helvetica, sans-serif" font-size="66" font-weight="700">EN PREPARACI&#211;N</text>
+  <text x="600" y="980" text-anchor="middle" fill="#526a76" font-family="Arial, Helvetica, sans-serif" font-size="26">PRÓXIMAMENTE</text>
+  <line x1="120" y1="1370" x2="1080" y2="1370" stroke="#171717" stroke-width="2"/>
+  <text x="120" y="1430" fill="#526a76" font-family="Arial, Helvetica, sans-serif" font-size="22">VICENTE PALACIO</text>
+  <text x="1080" y="1430" text-anchor="end" fill="#526a76" font-family="Arial, Helvetica, sans-serif" font-size="22">DESARROLLO FRONTEND</text>
+</svg>
